@@ -1,0 +1,148 @@
+{
+  "stock_list": {
+    "last_update": "2026-02-03 04:23:31",
+    "records": 5477
+  },
+  "etf_list": {
+    "last_update": "2026-02-03 04:23:33",
+    "records": 2497
+  },
+  "option_list": {
+    "last_update": "2026-02-03 04:23:36",
+    "records": 11076
+  },
+  "index_list": {
+    "last_update": "2026-02-03 04:23:38",
+    "records": 594
+  },
+  "concept": {
+    "last_update": "2026-02-03 04:23:40",
+    "records": 879
+  },
+  "ths_index": {
+    "last_update": "2026-02-03 04:23:42",
+    "records": 408
+  },
+  "shibor": {
+    "downloads": [
+      {
+        "start_date": "20200101",
+        "end_date": "20260203",
+        "records": 1504,
+        "time": "2026-02-03 03:52:50"
+      },
+      {
+        "start_date": "20200101",
+        "end_date": "20260203",
+        "records": 1504,
+        "time": "2026-02-03 04:23:44"
+      }
+    ]
+  },
+  "shibor_lpr": {
+    "downloads": [
+      {
+        "start_date": "20200101",
+        "end_date": "20260203",
+        "records": 72,
+        "time": "2026-02-03 03:52:52"
+      },
+      {
+        "start_date": "20200101",
+        "end_date": "20260203",
+        "records": 72,
+        "time": "2026-02-03 04:23:46"
+      }
+    ]
+  },
+  "cn_m": {
+    "downloads": [
+      {
+        "start_date": "20200101",
+        "end_date": "20260203",
+        "records": 576,
+        "time": "2026-02-03 03:52:54"
+      },
+      {
+        "start_date": "20200101",
+        "end_date": "20260203",
+        "records": 576,
+        "time": "2026-02-03 04:23:49"
+      }
+    ]
+  },
+  "cn_cpi": {
+    "downloads": [
+      {
+        "start_date": "20200101",
+        "end_date": "20260203",
+        "records": 504,
+        "time": "2026-02-03 03:52:57"
+      },
+      {
+        "start_date": "20200101",
+        "end_date": "20260203",
+        "records": 504,
+        "time": "2026-02-03 04:23:51"
+      }
+    ]
+  },
+  "margin": {
+    "downloads": [
+      {
+        "start_date": "20200101",
+        "end_date": "20260203",
+        "records": 3673,
+        "time": "2026-02-03 04:10:59"
+      }
+    ]
+  },
+  "margin_detail": {
+    "downloads": [
+      {
+        "start_date": "20200101",
+        "end_date": "20260203",
+        "records": 6000,
+        "time": "2026-02-03 04:11:01"
+      }
+    ]
+  },
+  "moneyflow": {
+    "downloads": [
+      {
+        "start_date": "20200101",
+        "end_date": "20260203",
+        "records": 6000,
+        "time": "2026-02-03 04:11:04"
+      }
+    ]
+  },
+  "daily": {
+    "downloads": [
+      {
+        "start_date": "20200101",
+        "end_date": "20260203",
+        "records": 6000,
+        "time": "2026-02-03 04:23:53"
+      }
+    ]
+  },
+  "top_list": {
+    "last_download": {
+      "start_date": "20200101",
+      "end_date": "20260203",
+      "success_count": 1476,
+      "fail_count": 0,
+      "time": "2026-02-03 04:35:50"
+    }
+  },
+  "top_inst": {
+    "last_download": {
+      "start_date": "20200101",
+      "end_date": "20260203",
+      "success_count": 1476,
+      "fail_count": 0,
+      "time": "2026-02-03 04:48:56"
+    }
+  }
+}
