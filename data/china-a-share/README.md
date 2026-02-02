@@ -1,6 +1,6 @@
 # 🇨🇳 A股市场数据 (China A-Share Market Data)
 
-本目录包含A股市场两融数据（融资融券）和北向资金数据，时间范围为 **2020年至今**。
+本目录包含A股市场两融数据（融资融券）、北向资金数据、龙虎榜数据和大宗交易数据，时间范围为 **2020年至今**。
 
 ## 📁 目录结构
 
@@ -11,14 +11,37 @@ china-a-share/
 │   ├── margin_data_2020_to_now.csv       # 完整数据（原始单位）
 │   ├── margin_sh_macro.csv               # 上海市场原始数据
 │   └── margin_sz_macro.csv               # 深圳市场原始数据
-└── northbound/               # 北向资金数据
-    ├── northbound_summary_2020_to_now.csv # 汇总数据（单位：亿元）
-    ├── northbound_full_raw.csv           # 北向资金原始数据
-    ├── hgt_full_raw.csv                  # 沪股通原始数据
-    └── sgt_full_raw.csv                  # 深股通原始数据
+├── northbound/               # 北向资金数据
+│   ├── northbound_summary_2020_to_now.csv # 汇总数据（单位：亿元）
+│   ├── northbound_full_raw.csv           # 北向资金原始数据
+│   ├── hgt_full_raw.csv                  # 沪股通原始数据
+│   └── sgt_full_raw.csv                  # 深股通原始数据
+├── dragon-tiger/             # 龙虎榜数据
+│   └── 龙虎榜详情_2020至今.csv           # 龙虎榜详情数据（约11万条）
+└── block-trade/              # 大宗交易数据
+    ├── 大宗交易市场统计_2020至今.csv     # 市场统计数据
+    └── 大宗交易每日统计_2020至今.csv     # 每日统计数据
 ```
 
 ## 📊 数据概览
+
+### 龙虎榜数据 (Dragon Tiger List Data)
+
+| 指标 | 数值 |
+|-----|------|
+| 时间范围 | 2020-01-01 至 2026-02-02 |
+| 记录数量 | 约 110,000 条 |
+| 数据来源 | 东方财富网数据中心 |
+| 主要字段 | 代码、名称、涨跌幅、龙虎榜净买额、上榜原因等 |
+
+### 大宗交易数据 (Block Trade Data)
+
+| 指标 | 数值 |
+|-----|------|
+| 时间范围 | 2020-01-01 至 2026-02-02 |
+| 市场统计记录 | 约 49,000 条 |
+| 每日统计记录 | 约 5,000 条 |
+| 数据来源 | 东方财富网数据中心 |
 
 ### 两融数据 (Margin Trading Data)
 
