@@ -1,6 +1,6 @@
 # 📊 Financial Data Hub
 
-A comprehensive collection of financial market data including **ETF fund flows**, **commodity futures**, and **macroeconomic indicators** from 2020 to present.
+A comprehensive collection of financial market data including **ETF fund flows**, **commodity futures**, **macroeconomic indicators**, and **China A-Share market data** from 2020 to present.
 
 ![Commodity Prices](charts/commodity_prices.png)
 
@@ -18,17 +18,45 @@ financial-data-hub/
 │   │   ├── etf_data_all.csv
 │   │   ├── etf_pivot_data.csv
 │   │   └── etf_summary.csv
-│   └── macro/                # Macroeconomic indicators
-│       ├── macro_data_all.csv
-│       ├── cpi_data.csv
-│       ├── interest_rate_data.csv
-│       └── ism_pmi_data.csv
+│   ├── macro/                # Macroeconomic indicators
+│   │   ├── macro_data_all.csv
+│   │   ├── cpi_data.csv
+│   │   ├── interest_rate_data.csv
+│   │   └── ism_pmi_data.csv
+│   └── china-a-share/        # China A-Share market data (NEW)
+│       ├── margin/           # Margin trading data (融资融券)
+│       └── northbound/       # Northbound capital data (北向资金)
 ├── charts/                   # Visualization charts
 ├── scripts/                  # Data collection scripts
 └── docs/                     # Documentation and reports
 ```
 
 ## 📈 Data Coverage
+
+### 🇨🇳 China A-Share Market Data (2020-2026) **NEW**
+
+#### Margin Trading (融资融券)
+| Indicator | Value |
+|-----------|-------|
+| Date Range | 2020-01-02 to 2026-01-30 |
+| Trading Days | 1,475 |
+| Total Margin Balance (Latest) | ¥27,064.74 billion |
+| Total Margin Balance (Peak) | ¥27,336.82 billion |
+| Average Daily Margin Purchase | ¥885.08 billion |
+
+#### Northbound Capital (北向资金)
+| Indicator | Value |
+|-----------|-------|
+| Date Range | 2020-01-02 to 2026-02-02 |
+| Valid Trading Days | 1,074 |
+| Cumulative Net Inflow | ¥365.28 billion |
+| Northbound Holdings (Latest) | ¥25,897.54 billion |
+| Net Inflow Days | 784 |
+| Net Outflow Days | 290 |
+
+![Margin Trading](charts/china-a-share/margin_visualization.png)
+
+![Northbound Capital](charts/china-a-share/northbound_visualization.png)
 
 ### Commodity Futures (2020-2026)
 | Commodity | Symbol | Data Points | Price Range |
@@ -88,11 +116,15 @@ financial-data-hub/
 ### ETF Total Returns
 ![ETF Returns](charts/etf_total_returns.png)
 
+### China A-Share: Margin vs Northbound
+![Combined](charts/china-a-share/combined_visualization.png)
+
 ## 🔧 Data Sources
 
 - **Yahoo Finance API**: Commodity futures and ETF data
 - **FRED (Federal Reserve Economic Data)**: CPI, interest rates, unemployment
 - **ISM (Institute for Supply Management)**: Manufacturing PMI
+- **Eastmoney (东方财富)**: China A-Share margin trading and northbound capital data
 
 ## 📝 Data Format
 
@@ -119,6 +151,14 @@ etf_data['Date'] = pd.to_datetime(etf_data['Date'])
 # Load macro data
 macro_data = pd.read_csv('data/macro/macro_data_all.csv')
 macro_data['Date'] = pd.to_datetime(macro_data['Date'])
+
+# Load China A-Share margin data (NEW)
+margin_data = pd.read_csv('data/china-a-share/margin/margin_summary_2020_to_now.csv')
+margin_data['日期'] = pd.to_datetime(margin_data['日期'])
+
+# Load China A-Share northbound data (NEW)
+northbound_data = pd.read_csv('data/china-a-share/northbound/northbound_summary_2020_to_now.csv')
+northbound_data['日期'] = pd.to_datetime(northbound_data['日期'])
 ```
 
 ## 📅 Update Schedule
